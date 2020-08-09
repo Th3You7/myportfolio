@@ -1,0 +1,66 @@
+#nav {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  a {
+    display: inline-block;
+    margin: 0 0.3rem;
+    @include sm {
+      margin: 0 0.5rem;
+    }
+    position: relative;
+    .icon {
+      font-size: 2rem;
+      @include sm {
+        font-size: 2.5rem;
+      }
+      color: $mainColor;
+      opacity: 0.35;
+      margin-bottom: 1rem;
+      transition: $easeInOut;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    span {
+      display: block;
+      background-color: $secColor;
+      color: $mainColor;
+      position: relative;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transition: $easeInOut;
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: -0.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: solid 0.6rem $secColor;
+        border-left: solid 0.6rem transparent;
+        border-right: solid 0.6rem transparent;
+      }
+    }
+    &:hover span {
+      opacity: 1;
+    }
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      opacity: 0;
+      transform: translateX(-50%);
+      border-bottom: solid 1rem $mainColor;
+      border-left: solid 1rem transparent;
+      border-right: solid 1rem transparent;
+    }
+  }
+  .active::after {
+    opacity: 1;
+  }
+}

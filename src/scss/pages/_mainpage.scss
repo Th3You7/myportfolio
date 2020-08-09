@@ -1,0 +1,65 @@
+//** Styling main
+#main {
+  display: block;
+  width: 100%;
+  //** Styling home
+  #me {
+    display: flex;
+    flex-wrap: wrap;
+    height: 60vh;
+    @include md {
+      height: 75vh;
+    }
+    @include lg {
+      height: 60vh;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 2.5rem;
+      height: 30%;
+      background-color: $mainColor;
+      @include lg {
+        width: 60%;
+        height: 100%;
+        justify-content: start;
+      }
+      .text {
+        display: block;
+        h1 {
+          color: $secColor;
+          font-size: 2rem;
+          font-weight: 400;
+          @include md {
+            font-size: 2.5rem;
+          }
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 200;
+          color: grey;
+          @include md {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .mypic {
+      display: block;
+      width: 100%;
+      height: 70%;
+      @include lg {
+        width: 40%;
+        height: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
