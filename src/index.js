@@ -19,4 +19,16 @@ $(document).ready(function () {
       var panel = $(this).attr("id");
       $("#panel_" + panel).removeClass("panel_unactive");
     });
+
+  $(".filter li").on("click", function () {
+    $(".filter li").removeClass("active");
+    var thisClass = $(this).attr("class");
+    $(this).addClass("active");
+    $(".project").hide();
+    if (thisClass === "all") {
+      $(".project").show(500);
+    } else {
+      $(".project_" + thisClass).show(500);
+    }
+  });
 });
