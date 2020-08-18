@@ -2,10 +2,12 @@
 
 @import "./helpers/vars";
 @import "./helpers/mixins";
+@import "./helpers/classes";
 
 @import "./base/reset";
 @import "./base/typography";
 
 @import "./components/navbar";
+@import "./components/forms";
 
 @import "./pages/mainpage";

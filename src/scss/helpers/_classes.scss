@@ -1,0 +1,10 @@
+//*** active class for panels
+.panel_active {
+  opacity: 1 !important;
+}
+
+.panel_unactive {
+  display: none !important;
+  opacity: 0 !important;
+  transition: $easeInOut !important;
+}

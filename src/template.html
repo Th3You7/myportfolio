@@ -9,18 +9,24 @@
     <div class="container">
       <!-- Navbar -->
       <nav id="nav">
-        <a href="#" class="active"
+        <a href="#" id="me" class="active link"
           ><span>Home</span><i class="icon fas fa-home"></i
         ></a>
-        <a href="#"><span>Work</span><i class="icon fas fa-folder"></i></a>
-        <a href="#"><span>Contact</span><i class="icon fas fa-envelope"></i></a>
-        <a href="#"><span>Twitter</span><i class="icon fab fa-twitter"></i></a>
+        <a href="#" id="work" class="link"
+          ><span>Work</span><i class="icon fas fa-folder"></i
+        ></a>
+        <a href="#" id="contact" class="link"
+          ><span>Contact</span><i class="icon fas fa-envelope"></i
+        ></a>
+        <a href="https://github.com/Th3You7" target="_blank"
+          ><span>Github</span><i class="icon fab fa-github"></i
+        ></a>
       </nav>
 
       <!-- Main -->
       <main id="main">
         <!-- Home section-->
-        <article id="me">
+        <article id="panel_me" class="panel">
           <header>
             <div class="text">
               <h1>Younes Elbasiri</h1>
@@ -31,10 +37,89 @@
             <img src="./imgs/mypic.jpg" alt="" />
           </div>
         </article>
-        <article id="contact">
+
+        <!--  Work Section -->
+        <article id="panel_work" class="panel panel_unactive">
+          <header>
+            <h3>Projects</h3>
+            <ul>
+              <li>All</li>
+              <li>Reactjs</li>
+              <li>HTML/CSS</li>
+            </ul>
+          </header>
+          <section class="projects">
+            <div class="project">
+              <img src="./imgs/project1.png" alt="project picture" />
+              <div>
+                <a
+                  href="https://github.com/Th3You7/devfolio-portfolio"
+                  target="_blank"
+                >
+                  <span class="code">Check code</span>
+                  <i class="fas fa-code"></i>
+                </a>
+                <a href="https://th3you7.github.io/devfolio" target="_blank">
+                  <span class="see">See it live</span>
+                  <i class="far fa-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project">
+              <img src="./imgs/project2.png" alt="" />
+              <div>
+                <a
+                  href="https://codepen.io/th3you7/pen/ZEbWBvW"
+                  target="_blank"
+                >
+                  <span class="code">Check code</span>
+                  <i class="fas fa-code"></i>
+                </a>
+                <a
+                  href="https://codepen.io/th3you7/full/ZEbWBvW"
+                  target="_blank"
+                >
+                  <span class="see">See it live</span>
+                  <i class="far fa-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project">
+              <img src="./imgs/project3.png" alt="" />
+              <div>
+                <a
+                  href="https://github.com/Th3You7/insure-html-template"
+                  target="_blank"
+                >
+                  <span class="code">Check code</span>
+                  <i class="fas fa-code"></i>
+                </a>
+                <a href="https://th3you7.github.io/insure/" target="_blank">
+                  <span class="see">See it live</span>
+                  <i class="far fa-eye"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project">
+              <img src="./imgs/project4.png" alt="" />
+              <div>
+                <a href="https://github.com/Th3You7/quizUp" target="_blank">
+                  <span class="code">Check code</span>
+                  <i class="fas fa-code"></i>
+                </a>
+                <a href="https://th3you7.github.io/quizUp/#/" target="_blank">
+                  <span class="see">See it live</span>
+                  <i class="far fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+        </article>
+        <!-- Contact section -->
+        <article id="panel_contact" class="panel panel_unactive">
           <h3>Message Me</h3>
           <!--Form-->
-          <form id="form">
+          <form action="/send" method="POST" id="form">
             <input type="text" placeholder="Name" /> <br />
             <input type="email" placeholder="Email" /><br />
             <input type="text" placeholder="Subject" /> <br />

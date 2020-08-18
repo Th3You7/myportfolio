@@ -1,0 +1,42 @@
+//*** Contact form
+#form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    padding: 0.6rem;
+    color: #363636;
+    margin-bottom: 1rem;
+    background-color: #f1f1f1;
+    transition: $easeInOut;
+    &:focus {
+      background: #f8f8f8;
+    }
+    @include md {
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+  button {
+    padding: 1rem;
+    font-size: 1rem;
+    color: $mainColor;
+    background-color: $secColor;
+    width: 100%;
+    @include md {
+      width: auto;
+      padding: 1.5rem;
+    }
+  }
+  input[type="text"]:nth-of-type(1),
+  input[type="email"] {
+    @include lg {
+      width: 49%;
+      flex: 0 1 auto;
+    }
+  }
+}

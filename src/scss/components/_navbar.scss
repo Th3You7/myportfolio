@@ -5,7 +5,7 @@
   margin-bottom: 1rem;
   a {
     display: inline-block;
-    margin: 0 0.3rem;
+    margin: 0 0.1rem;
     @include sm {
       margin: 0 0.5rem;
     }
@@ -58,9 +58,15 @@
       border-bottom: solid 1rem $mainColor;
       border-left: solid 1rem transparent;
       border-right: solid 1rem transparent;
+      transition: $easeInOut;
     }
   }
-  .active::after {
-    opacity: 1;
+  .active {
+    &::after {
+      opacity: 1;
+    }
+    .icon {
+      opacity: 1;
+    }
   }
 }
