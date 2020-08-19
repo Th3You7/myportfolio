@@ -9,6 +9,14 @@ import "@fortawesome/fontawesome-free/js/regular";
 
 import $ from "jquery";
 
+$(window).on("load", function () {
+  $(".preloader")
+    .delay(100)
+    .fadeOut("slow", function () {
+      $(this).remove();
+    });
+});
+
 $(document).ready(function () {
   $(".link")
     .not(":last-of-type")
